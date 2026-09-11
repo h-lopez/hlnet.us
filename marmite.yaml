@@ -1,17 +1,12 @@
 name: HLnet
 https: null
 footer: fuck ICE
-enable_toolbar: false
+# enable_toolbar: true
 pagination: 10
 pages_title: WTF
 enable_search: false
 enable_related_content: false
 search_title: ''
-content_path: content
-site_path: ''
-templates_path: templates
-static_path: static
-media_path: media
 default_date_format: '%Y-%m-%d '
 menu:
 - - /home
@@ -25,12 +20,6 @@ menu:
 extra:
   colorscheme: solarized
 toc: true
-json_feed: false
-show_next_prev_links: true
-publish_md: false
 source_repository: null
-markdown_parser:
-  render:
-    unsafe: false
 theme: null
 url: https://hlnet.us

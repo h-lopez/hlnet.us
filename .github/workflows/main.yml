@@ -21,9 +21,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -33,7 +33,7 @@ jobs:
         run: curl -sS https://marmite.blog/install.sh | sh
 
       - name: Build site
-        run: marmite . site --debug
+        run: marmite . site --enable-toolbar false
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -41,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "site"
+          path: 'site'
 
       - name: Deploy to GitHub Pages
         id: deployment
